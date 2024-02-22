@@ -1,36 +1,24 @@
 import { useState } from "react";
 import { students, cats, dogs } from "./data";
 import "./App.css";
+import Student from "./Student";
+import Studentlist from "./Studentlist";
+import Cat from "./Cat";
+import Dog from "./Dog";
+import CatList from "./CatList";
+import DogList from "./DogList";
 
 function App() {
   return (
     <div>
       <h1> Students </h1>
-      {students.map((student) => {
-        return <h2 key={student.id}>{student.name}</h2>;
-      })}
+      <Studentlist students={students} />
 
       <h1>Cats</h1>
-      {cats.map((cat) => {
-        return (
-          <div key={cat.id} className="cat-card">
-            <h2>{cat.name}</h2>
-            <p>Age: {cat.age}</p>
-            <p>Color: {cat.color}</p>
-          </div>
-        );
-      })}
+      <CatList cats={cats} />
 
       <h1>Dogs</h1>
-      {dogs.map((dog) => {
-        return (
-          <div key={dog.id} className="dog-card">
-            <h2>{dog.name}</h2>
-            <p>Age: {dog.age}</p>
-            <p>Breed: {dog.breed}</p>
-          </div>
-        );
-      })}
+      <DogList dogs={dogs} />
     </div>
   );
 }
