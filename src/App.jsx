@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { students, cats, dogs } from "./data";
 import "./App.css";
-import Student from "./Student";
 import Studentlist from "./Studentlist";
-import Cat from "./Cat";
-import Dog from "./Dog";
 import CatList from "./CatList";
 import DogList from "./DogList";
+import "normalize.css";
 
 function App() {
   return (
