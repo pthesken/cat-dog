@@ -1,3 +1,7 @@
 export default function Student({ student }) {
-  return <h2>{student.name}</h2>;
+  return (
+    <div className="student-card">
+      <h2>{student.name}</h2>
+    </div>
+  );
 }

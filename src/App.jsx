@@ -1,22 +1,22 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { students, cats, dogs } from "./data";
 import "./App.css";
-import Studentlist from "./Studentlist";
-import CatList from "./CatList";
-import DogList from "./DogList";
+import StudentsPage from "./routes/StudentsPage";
+import DogsPage from "./routes/DogsPage";
 import "normalize.css";
+import CatsPage from "./routes/CatsPage";
 
 function App() {
   return (
     <div>
-      <h1> Students </h1>
-      <Studentlist students={students} />
+      <Routes>
+        <Route path="/" element={<StudentsPage students={students} />} />
 
-      <h1>Cats</h1>
-      <CatList cats={cats} />
+        <Route path="/cats" element={<CatsPage cats={cats} />} />
 
-      <h1>Dogs</h1>
-      <DogList dogs={dogs} />
+        <Route path="/dogs" element={<DogsPage dogs={dogs} />} />
+      </Routes>
     </div>
   );
 }
